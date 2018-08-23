@@ -1,25 +1,25 @@
 {
-    "name": "creativewebonline",
-    "version": "0.2.0",
-    "description": "creativewebonline",
-    "main": "index.js",
-    "scripts": {
-      "start": "node node_modules/http-server/http-server node_modules/http-server"
-    },
-    "dependencies": {
-      "http-server": "0.11.1"
-    },
-    "engines": {
-      "node": "4.0.0"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/donatoverite/creativewebonline"
-    },
-    "keywords": [
-    ],
-    "author": "Verite Donato",
-    "contributors": [
-    ],
-    "license": "MIT"
-  }
+  "name": "creativelibrary",
+  "version": "0.2.0",
+  "description": "creativelibrary",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/tiny-server/bin/index web"
+  },
+  "dependencies": {
+
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donatoverite/creativelibrary"
+  },
+  "keywords": [
+  ],
+  "author": "Verite Donato",
+  "contributors": [
+  ],
+  "license": "MIT"
+}

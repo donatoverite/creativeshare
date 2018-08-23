@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" type="text/css" href="admin.css">
+
+
+<div id=status></div>
+
+<SCRIPT SRC='update.js'></SCRIPT>
+
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+<SCRIPT>
+document.getElementById('status').innerHTML = "";
+var items = {};
+function addItem(){   var overlay2 = document.getElementById('overlay2').value;var name =
+document.getElementById('name').value;var ref =
+new Firebase('https://creative-media.firebaseio.com/userdata');
+var exists = false;ref.on ("value",function (snapshot){
+if ( snapshot.child(name).exists() ) exists = true;});
+if ( exists == true ){document.getElementById('status').innerHTML =
+"Content name already in use";return;}items[name] = overlay2;
+var ref = new Firebase('https://creative-media.firebaseio.com/userdata');
+ref.update(items);
+if ( !document.getElementById('status').innerHTML )
+    document.getElementById('status').innerHTML = "Content created";
+ }
+</SCRIPT>
+
+<div id=content>
+<FONT  size=2>Creative Notepad - Write and Share<P>
+<FONT id=_name FACE=Verdana>Name:</FONT>
+ <input id=name  type=text><P>
+<font face=verdana>Content:</font><textarea id=overlay2 rows=10 cols=50></textarea><P><button id=add
+ onclick='addItem();'>Add Item</button></FONT>
+<button onclick='location.href="/";'>Home Page</Button></div>
